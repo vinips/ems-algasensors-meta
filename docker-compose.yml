@@ -10,5 +10,7 @@ services:
       RABBITMQ_DEFAULT_PASS: rabbitmq
     volumes:
       - algasensors-rabbitmq:/var/lib/rabbitmq/
+      #Configucarao para habilitar o plugin de mover messages manualmente no Management
+      - ./configs/rabbitmq/enabled_plugins:/etc/rabbitmq/enabled_plugins
 volumes:
   algasensors-rabbitmq:
